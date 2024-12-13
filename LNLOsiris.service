@@ -1,0 +1,12 @@
+[Unit]
+Description=Printer Dashboard Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/osiris/osiris-dashboard.py
+WorkingDirectory=/home/osiris/
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
